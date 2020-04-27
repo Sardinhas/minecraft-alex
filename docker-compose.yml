@@ -1,0 +1,24 @@
+version: "3.3"
+services:
+    minecraft-bedrock-server:
+        container_name: minecraft-alex
+        environment:
+            - EULA=TRUE
+            - LEVEL_NAME=Alex World
+            - MOTD=Diverte-te Alex
+            - LEVEL_TYPE=DEFAULT
+            - SPAWN_NPCS=true
+            - SPAWN_MONSTERS=false
+            - SPAWN_ANIMALS=true
+            - GENERATE_STRUCTURES=true
+            - ALLOW_NETHER=false
+            - LEVEL_SEED=596023008481559
+            - PVP=false
+            - GAMEMODE=creative
+            - MAX_PLAYERS=5
+            - ALLOW_CHEATS=false
+        ports:
+            - "19132:19132/udp"
+        image: "itzg/minecraft-bedrock-server"
+        volumes:
+            - "./data:/data"
