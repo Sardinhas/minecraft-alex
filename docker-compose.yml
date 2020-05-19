@@ -2,10 +2,11 @@ version: "3.3"
 services:
     minecraft-bedrock-server:
         container_name: minecraft-alex
+        restart: always
         environment:
             - EULA=TRUE
             - LEVEL_NAME=Alex World
-            - MOTD=Diverte-te Alex
+            - MOTD="Diverte-te Alex"
             - LEVEL_TYPE=DEFAULT
             - SPAWN_NPCS=true
             - SPAWN_MONSTERS=false
