@@ -16,7 +16,8 @@ services:
             - PVP=false
             - GAMEMODE=creative
             - MAX_PLAYERS=5
-            - ALLOW_CHEATS=false
+            - ALLOW_CHEATS=true
+            - PLAYER_IDLE_TIMEOUT=30
         ports:
             - "19132:19132/udp"
         image: "itzg/minecraft-bedrock-server"
